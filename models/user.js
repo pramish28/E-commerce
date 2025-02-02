@@ -18,7 +18,15 @@
     const db = getDb();
     return db
     .collection('users')
-    .findOne({_id: new ObjectId(userId) });
+    .findOne({_id: new ObjectId(userId) })
+    .then(user => {
+      console.log(user);
+      return user;
+    })
+    .catch(err => {
+      console.log(err);
+    }
+    );
    
   }
 }
