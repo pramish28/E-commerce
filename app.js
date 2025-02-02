@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
  User.findByPk('679fb46396b91ff71a7ba43a')
    .then(user => {
-     req.user = user;
+     req.user = new User(user.name, user.email, user.cart, user._id);
      next();
    })
    .catch(err => console.log(err));
