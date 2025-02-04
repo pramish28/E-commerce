@@ -9,7 +9,7 @@ MongoClient.connect(
     'mongodb+srv://pramish:password%40psp123@cluster0.0g070.mongodb.net/shop?retryWrites=true&w=majority&appName=Cluster0'
 )
 .then(client => {
-  console.log('Yo Man you are doing great');
+  console.log('Connected!');
   _db = client.db();
     callback();
 })
