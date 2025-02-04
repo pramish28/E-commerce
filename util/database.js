@@ -23,7 +23,7 @@ const getDb = () => {
   if (_db) {
     return _db;
   }
-  throw 'No database found!';
+  throw 'Check And try Again. No Database found!';
 }
 
 exports.mongoConnect = mongoConnect;
